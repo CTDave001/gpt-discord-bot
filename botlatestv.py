@@ -1,5 +1,5 @@
 import asyncio
-from secrets import DISCORD_SECRET, the_id_of_your_guild
+from secrets import DISCORD_SECRET, GUILD_ID
 import interactions
 from gpt_bot import gpt_bot as ai_answer
 
@@ -22,7 +22,7 @@ async def show_typing_indicator(msg: interactions.Message):
 @bot.command(
     name="chem",
     description="Your personalized chemistry tutor bot",
-    scope=the_id_of_your_guild,
+    scope=GUILD_ID,
     options=[
         interactions.Option(
             name="text",
